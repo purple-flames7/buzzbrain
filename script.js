@@ -1,4 +1,4 @@
-// Some sample questions for Phase 1
+// Questions
 const questions = [
   {
     question: "Which country won the FIFA World Cup in 2022?",
@@ -17,24 +17,72 @@ const questions = [
   },
 ];
 
-// DOM Elements
-const questionText = document.getElementById("questions");
-const answerButtons = document.getElementById("answer-buttons");
-const buttons = answerButtons.querySelectorAll(".btn");
-
-// Index of the question to display (Phase 1: just showing the first one)
 let currentQuestionIndex = 0;
+let userAnswers = [];
 
-function showQuestion(index) {
-  const currentQuestion = questions[index];
-  questionText.textContent = currentQuestion.question;
+const questionElement = document.getElementById("questions");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
 
-  currentQuestion.answers.forEach((answer, i) => {
-    if (buttons[i]) {
-      buttons[i].textContent = answer;
-    }
+function startQuiz() {
+  currentQuestionIndex = 0;
+  userAnswers = [];
+  nextButton.innerText = "Next";
+  showQuestion();
+}
+
+function showQuestion() {
+  resetState();
+  const currentQuestion = questions[currentQuestionIndex];
+  questionElement.innerText = currentQuestion.question;
+
+  currentQuestion.answers.forEach((answer) => {
+    const button = document.createElement("button");
+    button.innerText = answer;
+    button.classList.add("answer-btn");
+    button.addEventListener("click", () => selectAnswer(answer));
+    answerButtons.appendChild(button);
   });
 }
 
-// Show the first question
-showQuestion(currentQuestionIndex);
+function resetState() {
+  nextButton.style.display = "none";
+  while (answerButtons.firstChild) {
+    answerButtons.removeChild(answerButtons.firstChild);
+  }
+}
+
+function selectAnswer(answer) {
+  userAnswers[currentQuestionIndex] = answer;
+
+  // Disable all buttons once answer is selected
+  Array.from(answerButtons.children).forEach((button) => {
+    button.disabled = true;
+
+    // Add selected class to the one that matches the answer
+    if (button.innerText === answer) {
+      button.classList.add("selected");
+    }
+  });
+
+  nextButton.style.display = "block";
+}
+
+// Keeping track of the question  and completing the quiz
+nextButton.addEventListener("click", () => {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestion();
+  } else {
+    endQuiz();
+  }
+});
+
+function endQuiz() {
+  resetState();
+  questionElement.innerText = "Quiz Complete!";
+  nextButton.style.display = "none";
+  console.log("User Answers:", userAnswers); // For debugging
+}
+
+startQuiz();

@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuzzBrain</title>
-    <!-- Css link -->
+
+    <!-- Your Custom CSS (comes last for priority) -->
     <link rel="stylesheet" href="style.css" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,13 +21,12 @@
       <h1>BuzzBrain</h1>
       <div class="quiz">
         <h2 id="questions">Loading question...</h2>
-        <!-- Answer choices will go here -->
-        <div id="answer-buttons">
-          <button class="btn">Answer 1</button>
-          <button class="btn">Answer 2</button>
-          <button class="btn">Answer 3</button>
-          <button class="btn">Answer 4</button>
-        </div>
+
+        <!-- Buttons will be added here by JavaScript -->
+        <div id="answer-buttons"></div>
+
+        <!-- Custom-styled Next button -->
+        <button id="next-btn">Next</button>
       </div>
     </div>
 
