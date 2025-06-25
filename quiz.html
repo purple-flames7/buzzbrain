@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuzzBrain - Quiz</title>
+    <!-- Sttle sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Top Logo -->
+    <div class="top-logo">
+      <img src="images/BB-logo.png" alt="BuzzBrain Logo" class="quiz-logo" />
+    </div>
+
+    <!-- Main Quiz Section -->
+    <div class="language-screen quiz-screen">
+      <h2 id="question-text" class="title">Loading Question...</h2>
+
+      <div class="answer-buttons" id="answer-buttons">
+        <!-- Answers injected by JS -->
+      </div>
+
+      <div class="quiz-footer" id="progress-text">
+        <!-- Progress text injected by JS -->
+      </div>
+    </div>
+
+    <script src="questions-en.js"></script>
+    <script src="questions-sw.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
