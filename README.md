@@ -1,4 +1,4 @@
-BuzzBrain
+#BuzzBrain
 BuzzBrain is a bilingual quiz web application built with HTML, CSS and JavaScript. It allows users to test their knowledge across multiple categories and difficulty levels, in either English or Kiswahili. The app features interactive questions, instant feedback and a detailed review screen. 
 
 BuzzBrain features:
@@ -8,6 +8,12 @@ BuzzBrain features:
 -Instant feedback on answers
 -Fully responsive and mobile friendly design
 -LocalStorage-based state management
+
+Accessibility features:
+Aria labels have been added for some interactive elements
+
+Here's a link to get a feel of the application. 
+https://buzzbrain.netlify.app/
 
 Screenshots
 ![result page](https://github.com/user-attachments/assets/b3a9273c-b8b2-4cb7-9a8f-5b171f7e7817)
@@ -21,5 +27,3 @@ Screenshots
 ![difficulty page](https://github.com/user-attachments/assets/a5e8c605-7d30-4358-8bc1-ed1e8b62af1f)
 ![question page](https://github.com/user-attachments/assets/baf9f7a2-5a49-466c-8b91-90be204dd673)
 
-Accessibility features:
-Aria labels have been added for some interactive elements
