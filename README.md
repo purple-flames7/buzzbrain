@@ -2,12 +2,12 @@
 BuzzBrain is a bilingual quiz web application built with HTML, CSS and JavaScript. It allows users to test their knowledge across multiple categories and difficulty levels, in either English or Kiswahili. The app features interactive questions, instant feedback and a detailed review screen. 
 
 ## BuzzBrain features:
--Lanugage support: English and Kiswahili
--Categories: Sports, Geography, History, Literature, Film
--Difficulty levels: Easy, Medium, Hard
--Instant feedback on answers
--Fully responsive and mobile friendly design
--LocalStorage-based state management
+- Language support: English and Kiswahili
+- Categories: Sports, Geography, History, Literature, Film
+- Difficulty levels: Easy, Medium, Hard
+- Instant feedback on answers
+- Fully responsive and mobile friendly design
+- LocalStorage-based state management
 
 ## Accessibility features:
 Aria labels have been added for some interactive elements
